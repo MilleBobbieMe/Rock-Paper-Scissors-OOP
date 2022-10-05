@@ -1,0 +1,35 @@
+class Rock_Paper_Scissors:
+  def __init__(self,name,strength,weakness):
+    self.name=name
+    self.strength=strength
+    self.weakness=weakness
+  def specs(self):
+    print("Choice: ")
+    print(self.name)
+    print(f"Strength: {self.strength}")
+    print(f"Weakness: {self.weakness}")
+    
+  def get_weakness(self):
+    return self.weakness
+    
+  def get_strength(self):
+    return self.strength
+
+    
+def fight(type1,type2):
+  if type1.get_strength()==type2.name:
+    print(f"{type1} WINS!!!")
+  elif type1.get_weakness()==type2.name:
+    print(f"{type2} WINS!!!")
+  else:
+    if type1.name==type2.name:
+      print("TIE")
+print("___________________________________________________")
+rock=Rock_Paper_Scissors('Rock','Scissors','Paper')
+scissors=Rock_Paper_Scissors('Scissors','Paper','Rock')
+paper=Rock_Paper_Scissors('Paper','Rock','Scissors')
+fight(scissors,paper)
+#Google Colab code transfer
+#Github account with watching videos on how to use it
+#Complete Triangle example
+#Edit OOP Rock Paper Scissors after getting feed back
